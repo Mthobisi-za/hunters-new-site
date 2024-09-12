@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: 'TradeGothic LT Bold Regular';
+    src: url('./fonts/TradeGothic\ LT\ Bold\ Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: regular;
+}
+
+.bc-semi-italic {
+    /* font-family: "Barlow Condensed", sans-serif; */
+    font-weight: 600;
+    font-style: italic;
+}
+
+.bc-regular {
+    /* font-family: "Barlow Condensed", sans-serif; */
+    font-weight: 300;
+    font-style: normal;
+}
+
+.bc-semi-bold {
+    /* font-family: "Barlow Condensed", sans-serif; */
+    font-weight: 600;
+    font-style: normal;
+}
+
+.gold {
+    background: -webkit-linear-gradient(149deg, rgba(178, 130, 44, 1) 0%, rgba(253, 236, 156, 1) 22%, rgba(253, 236, 156, 1) 72%, rgba(178, 130, 44, 1) 100%);
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+:root {
+    --white: #FFFFFF;
+    --gold: #FFC557;
+    --red: #EA0029;
+    --light-white: #ffffff70;
+}
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+    padding: 0;
+    margin: 0;
+    background: rgb(24, 61, 29);
+    background: linear-gradient(149deg, rgba(24, 61, 29, 1) 0%, rgba(10, 126, 63, 1) 24%, rgba(11, 122, 61, 1) 73%, rgba(24, 61, 29, 1) 100%);
+}
+
+.menu-dsk {
+    background: rgb(1, 67, 9);
+    background: linear-gradient(149deg, rgba(1, 67, 9, 1) 0%, rgba(1, 97, 13, 1) 100%);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 70%;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+}
+
+.logo {}
+
+.logo img {
+    max-width: 200px;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    transition: cubic-bezier(.17, .67, .97, .33);
+}
+
+.menu-items .link-item {
+    text-decoration: none;
+    color: var(--light-white);
+    font-size: 18px;
+    font-family: 'TradeGothic LT Bold Regular';
+}
+
+.menu-items .link-item:hover {
+    color: var(--white);
+}
+
+.buy-btn {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 18px;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: 'TradeGothic LT Bold Regular';
+    border-radius: 4px;
+}
+
+
+/* mobile */
+
+.menu-mobile {
+    background: rgb(1, 67, 9);
+    background: linear-gradient(149deg, rgba(1, 67, 9, 1) 0%, rgba(1, 97, 13, 1) 100%);
+    width: 100%;
+    display: none;
+    grid-template-columns: 30% 30% 30%;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: hidden;
+}
+
+.mob-menu-items {
+    background: rgb(1, 67, 9);
+    background: linear-gradient(149deg, rgba(1, 67, 9, 1) 0%, rgba(1, 97, 13, 1) 100%);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding-top: 10px;
+    display: none;
+}
+
+.mob-menu-items .link-item {
+    text-decoration: none;
+    color: var(--light-white);
+    font-size: 18px;
+    font-family: 'TradeGothic LT Bold Regular';
+}
+
+.fullHeight {
+    height: 90vh;
+    transition: 0.8s cubic-bezier(0.5, 10, 0.6, 0.1);
+    display: flex;
+    position: fixed;
+    margin-top: 10vh;
+    z-index: 2;
+}
+
+.menu-mobile .logo img {
+    width: 100px;
+    max-width: 100%;
+}
+
+.btn_buy_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon_container {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+.icon_container span {
+    transition: all 0.4s cubic-bezier(0.5, 10, 0.6, 0.1);
+    display: block;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px #000000;
+}
+
+.active {
+    background: #fff;
+    width: 20px;
+    height: 3px;
+    margin-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.cross {
+    background: #fff;
+    width: 20px;
+    height: 3px;
+    margin-top: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.cross:nth-of-type(1) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cross:nth-of-type(2) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: -3px;
+}
+
+.buy-btn-mobile {
+    display: none;
+}
+
+.mb {
+    display: none;
+}
+
+
+/* responsive */
+
+@media (max-width: 982px) {
+    .menu-dsk,
+    .ds {
+        display: none;
+    }
+    .menu-mobile {
+        display: grid;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+    }
+    .mb {
+        display: block;
+    }
+}
+
+@media (max-width:530px) {
+    .buy-btn {
+        display: none;
+    }
+    .buy-btn-mobile {
+        display: block;
+        background-color: var(--red);
+        color: var(--white);
+        font-size: 18px;
+        padding: 10px 30px;
+        text-decoration: none;
+        font-family: 'TradeGothic LT Bold Regular';
+        border-radius: 4px;
+    }
+}
