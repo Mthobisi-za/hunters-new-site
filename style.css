@@ -38,6 +38,10 @@
     --light-white: #ffffff70;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Barlow Condensed", sans-serif;
     padding: 0;

@@ -1,0 +1,21 @@
+.about_content .img_title {
+    max-width: 50%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.semi_t {
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.about_content {
+    min-height: 0vh;
+}
+
+@media (max-width: 982px) {
+    .about_content .img_title {
+        max-width: 100%!important;
+    }
+}

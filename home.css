@@ -246,7 +246,7 @@
         width: 60%;
     }
     .img_title {
-        max-width: 40%;
+        max-width: 60%!important;
     }
 }
 
